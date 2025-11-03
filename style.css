@@ -1,0 +1,257 @@
+/* 
+   -----------------------------------------------------------------
+   New Color Palette:
+   - Page Background:      #f8f9fa (A very light, neutral off-white)
+   - Section Background:   #ffffff (Clean white)
+   - Primary Accent:       #6a7a8f (Dusty Slate Blue)
+   - Text Color:           #343a40 (Dark Charcoal Grey)
+   - Footer Background:    #343a40 (Matching Dark Charcoal Grey)
+   -----------------------------------------------------------------
+*/
+
+/* --- General & Typography --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 56px;
+    /* Offset for fixed navbar */
+    background-color: #f8f9fa;
+    /* Light, neutral background */
+    color: #343a40;
+    /* Main text color, dark but not black */
+    line-height: 1.7;
+    /* Improved readability */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* --- Navigation --- */
+.navbar {
+    background-color: #ffffff !important;
+    /* Clean white navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Softer, more modern shadow */
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40 !important;
+    /* Dark text for brand name */
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #555 !important;
+    margin: 0 10px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+/* Underline animation on hover for nav links */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background-color: #6a7a8f;
+    /* Dusty Slate Blue */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #343a40 !important;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background-color: #f8f9fa;
+    /* Match the body background for a seamless feel */
+    min-height: 80vh;
+    padding: 60px 0;
+    color: #343a40;
+}
+
+.hero-section .lead {
+    font-size: 1.15rem;
+    color: #555;
+}
+
+.hero-avatar {
+    width: 280px;
+    /* Slightly smaller for better balance */
+    height: 280px;
+    border-radius: 50%;
+    /* Makes the image circular */
+    object-fit: cover;
+    /* Prevents image distortion */
+    border: 10px solid #ffffff;
+    /* Clean white border */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    /* Refined shadow */
+}
+
+/* --- General Section Styles --- */
+section {
+    padding: 80px 0;
+    /* Increased padding for more white space */
+}
+
+#apie, #erdve {
+    background-color: #ffffff;
+    /* White background to stand out */
+}
+
+section h2 {
+    color: #343a40;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+/* Underline for headings */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    /* Shorter, more subtle line */
+    height: 3px;
+    background-color: #6a7a8f;
+    /* Dusty Slate Blue accent */
+}
+
+/* --- Services (Paslaugos) Section --- */
+.card {
+    border: 1px solid #e9ecef;
+    /* Subtle border */
+    background-color: #ffffff;
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+    border-color: #6a7a8f;
+    /* Accent color on hover */
+}
+
+.card-title {
+    color: #6a7a8f;
+    /* Dusty Slate Blue for card titles */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: #ffffff;
+    /* Use a clean white background */
+    color: #555;
+    /* Soft text color */
+    padding: 60px 0 20px 0;
+    border-top: 1px solid #e9ecef;
+    /* A subtle line to separate it from content */
+    font-size: 0.95rem;
+}
+
+.site-footer h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #343a40;
+    /* Darker heading color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.site-footer p {
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Footer Links Styling */
+.site-footer .footer-links,
+.site-footer .contact-info {
+    list-style: none;
+    padding-left: 0;
+}
+
+.site-footer a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-footer a:hover {
+    color: #6a7a8f;
+    /* Accent color on hover */
+}
+
+/* Contact Info Icons */
+.site-footer .contact-info li {
+    margin-bottom: 10px;
+}
+
+.site-footer .contact-info i {
+    color: #6a7a8f;
+    /* Accent color for icons */
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Footer Bottom Section (Social & Copyright) */
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid #e9ecef;
+    /* Separator line */
+}
+
+.copyright-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    color: #555;
+    margin: 0 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #6a7a8f;
+    /* Accent color background on hover */
+    color: #ffffff;
+    /* White icon on hover */
+}
