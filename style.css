@@ -1,14 +1,3 @@
-/* 
-   -----------------------------------------------------------------
-   New Color Palette:
-   - Page Background:      #f8f9fa (A very light, neutral off-white)
-   - Section Background:   #ffffff (Clean white)
-   - Primary Accent:       #6a7a8f (Dusty Slate Blue)
-   - Text Color:           #343a40 (Dark Charcoal Grey)
-   - Footer Background:    #343a40 (Matching Dark Charcoal Grey)
-   -----------------------------------------------------------------
-*/
-
 /* --- General & Typography --- */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -88,17 +77,51 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-avatar {
-    width: 280px;
+    width: 380px;
     /* Slightly smaller for better balance */
-    height: 280px;
+    height: 380px;
     border-radius: 50%;
     /* Makes the image circular */
     object-fit: cover;
     /* Prevents image distortion */
-    border: 10px solid #ffffff;
+    border: 5px solid #ffffff;
     /* Clean white border */
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     /* Refined shadow */
+}
+
+/* --- "Apie mane" Section Image Styles --- */
+#apie {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+/* The wrapper that creates the shape for the "Apie mane" image */
+.apie-image-wrapper {
+    position: relative;
+    height: 500px;
+    /* A bit taller to be a feature image */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.apie-image-wrapper:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* The image styling itself */
+.apie-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+/* The hover zoom effect */
+.apie-image-wrapper:hover img {
+    transform: scale(1.05);
 }
 
 /* --- General Section Styles --- */
@@ -158,6 +181,48 @@ section h2::after {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
+}
+
+/* --- "Erdvė" Section Image Styles --- */
+#erdve {
+    padding: 80px 0;
+    background-color: #ffffff;
+    /* Clean white background for this section */
+}
+
+/* The wrapper that creates the shape */
+.erdve-image-wrapper {
+    position: relative;
+    height: 400px;
+    /* This fixed height makes both containers identical */
+    border-radius: 12px;
+    /* The rounded corners */
+    overflow: hidden;
+    /* CRUCIAL: This clips the image to the rounded corners */
+    transition: box-shadow 0.3s ease;
+    /* Smooth shadow transition on hover */
+}
+
+.erdve-image-wrapper:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+    /* A nicer shadow on hover */
+}
+
+/* The image styling itself */
+.erdve-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    /* THE MAGIC: Fills the container, maintains aspect ratio, and crops excess */
+    object-fit: cover;
+    object-position: center;
+    /* Ensures the image is centered within its frame */
+    transition: transform 0.4s ease;
+    /* Smooth zoom transition */
+}
+
+/* A subtle zoom effect on hover for a more dynamic feel */
+.erdve-image-wrapper:hover img {
+    transform: scale(1.05);
 }
 
 /* --- Footer --- */
@@ -249,9 +314,49 @@ section h2::after {
     transition: background-color 0.3s, color 0.3s;
 }
 
+
 .social-icons a:hover {
     background-color: #6a7a8f;
     /* Accent color background on hover */
     color: #ffffff;
     /* White icon on hover */
+}
+
+/* --- Side-by-Side Map & Image Section --- */
+#kaip-rasti {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    /* Or #ffffff if you prefer a white background */
+}
+
+/* Common styles for both wrappers */
+.map-wrapper,
+.image-wrapper {
+    position: relative;
+    height: 450px;
+    /* You can adjust this height */
+    overflow: hidden;
+    /* This is KEY: it clips the content to the rounded corners */
+    border-radius: 12px;
+    /* Adjust for more or less rounding */
+    background-color: #e9ecef;
+    /* A placeholder color while the map/image loads */
+}
+
+/* Styles for the map iframe */
+.map-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Styles for the image */
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This prevents the image from being stretched or distorted */
 }

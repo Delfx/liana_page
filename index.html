@@ -74,14 +74,16 @@
     </header>
 
     <!-- Apie mane -->
-    <section id="apie" class="py-5">
+    <section id="apie">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="img/liana-skaito.jpg" alt="Liana Sapegina skaito vaikams"
-                        class="img-fluid rounded shadow-lg">
+            <div class="row align-items-center g-5"> <!-- g-5 adds a larger gap -->
+                <div class="col-lg-6">
+                    <!-- Wrapper for the "Apie mane" image -->
+                    <div class="apie-image-wrapper shadow-sm">
+                        <img src="img/liana-skaito.jpg" alt="Liana Sapegina skaito vaikams">
+                    </div>
                 </div>
-                <div class="col-md-6 mt-4 mt-md-0">
+                <div class="col-lg-6">
                     <h2>Apie mane</h2>
                     <p>Esu Liana Sapegina, vaikų psichologė. Mano tikslas – padėti vaikams suprasti savo jausmus,
                         įveikti sunkumus ir augti laimingiems. Tikiu, kad kiekvienas vaikas yra unikalus, todėl savo
@@ -132,23 +134,62 @@
     </section>
 
     <!-- Mano erdvė -->
-    <section id="erdve" class="py-5">
+    <section id="erdve">
         <div class="container">
-            <h2 class="text-center mb-4">Saugi aplinka Jūsų vaikui</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4 ">
-                    <img src="img/erdve-1.jpg" alt="Žaidimų kambarys" class="img-fluid rounded shadow">
+            <h2 class="text-center">Saugi aplinka Jūsų vaikui</h2>
+            <p class="lead text-center mx-auto mb-5" style="max-width: 600px;">
+                Mano darbo kabinetas sukurtas taip, kad vaikai jaustųsi jaukiai ir saugiai. Čia gausu žaislų ir
+                priemonių, kurios padeda atsiverti ir tyrinėti savo vidinį pasaulį per žaidimą.
+            </p>
+            <div class="row g-4"> <!-- g-4 adds a gap between columns -->
+                <div class="col-md-6">
+                    <!-- Wrapper for the first image -->
+                    <div class="erdve-image-wrapper shadow-sm">
+                        <img src="img/erdve-1.jpg" alt="Žaidimų kambarys su lentyna">
+                    </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <img src="img/erdve-2.jpg" alt="Konsultacijų kambarys" class="img-fluid rounded shadow">
+                <div class="col-md-6">
+                    <!-- Wrapper for the second image -->
+                    <div class="erdve-image-wrapper shadow-sm">
+                        <img src="img/erdve-2.jpg" alt="Konsultacijų kambarys su krėslais">
+                    </div>
                 </div>
             </div>
-            <p class="text-center mt-3">Mano darbo kabinetas sukurtas taip, kad vaikai jaustųsi jaukiai ir saugiai. Čia
-                gausu žaislų ir priemonių, kurios padeda atsiverti ir tyrinėti savo vidinį pasaulį per žaidimą.</p>
         </div>
     </section>
 
-    <!-- Kontaktai -->
+
+
+    <!-- ====================================================== -->
+    <!-- NEW AND CORRECTED MAP SECTION STARTS HERE -->
+    <!-- ====================================================== -->
+    <section id="kaip-rasti">
+        <div class="container">
+            <h2 class="text-center mb-5">Kaip mane rasti</h2>
+            <div class="row g-4 align-items-stretch"> <!-- g-4 adds a nice gap between columns -->
+
+                <!-- Map Column -->
+                <div class="col-lg-6">
+                    <div class="map-wrapper shadow">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.907011435094!2d25.27630555688569!3d54.69530029314933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd940445c371c5%3A0xd4248db9fcfcbca!2sKonstitucijos%20pr.%2012!5e0!3m2!1sen!2slt!4v1762196584868!5m2!1sen!2slt"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="col-lg-6">
+                    <div class="image-wrapper shadow">
+                        <img src="img/durys.png" alt="Įėjimas į kabinetą">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Kontaktai (FOOTER STARTS HERE) -->
     <footer id="kontaktai" class="site-footer">
         <div class="container">
             <div class="row">
@@ -175,7 +216,7 @@
                         <li><i class="fas fa-envelope"></i> <a
                                 href="mailto:info@lianasapegina.lt">info@lianasapegina.lt</a></li>
                         <li><i class="fas fa-phone"></i> <a href="tel:+37060012345">+370 600 12345</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> Pavyzdžio g. 1, Vilnius</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Konstitucijos pr. 12, Vilnius</li>
                     </ul>
                 </div>
             </div>
@@ -190,7 +231,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
