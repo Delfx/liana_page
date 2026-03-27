@@ -96,6 +96,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ffffff;
 }
 
+#poziuris {
+    padding: 80px 0;
+    background-color: #ffffff !important;
+}
+
 /* The wrapper that creates the shape for the "Apie mane" image */
 .apie-image-wrapper {
     position: relative;

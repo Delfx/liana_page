@@ -6,236 +6,282 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psichologė Liana Sapegina | Pagalba vaikams ir šeimai</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Išlaikome jūsų stilių, pritaikant mažesnius kainų blokus */
+        .price-card { border: 1px solid #eee; padding: 15px; border-radius: 10px; background: #fff; }
+        .price-card h5 { font-size: 0.95rem; margin-bottom: 5px; }
+        .price-amount { font-size: 1.2rem; font-weight: bold; color: #333; }
+        .hero-contact-info i { color: #6c757d; width: 25px; }
+        .hero-contact-info div { margin-bottom: 8px; font-size: 1rem; }
+    </style>
 </head>
 
 <body>
 
-    <!-- Navigacija -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">Liana Sapegina</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#apie">Apie mane</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#paslaugos">Paslaugos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#erdve">Mano erdvė</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#kontaktai">Kontaktai</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#apie">Apie mane</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#poziuris">Požiūris</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kaip-vyksta">Konsultacijos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kainos">Kainos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#erdve">Mano erdvė</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontaktai">Kontaktai</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Pagrindinis pasveikinimas -->
-    <!-- Pagrindinis pasveikinimas -->
-    <header id="pagrindinis" class="hero-section d-flex align-items-center">
+    <header id="pagrindinis" class="hero-section d-flex align-items-center" style="padding-top: 120px; padding-bottom: 60px;">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Teksto dalis -->
                 <div class="col-lg-7 text-center text-lg-start">
                     <h1 class="display-4">Liana Sapegina</h1>
-                    <p class="lead">Profesionali ir empatiška pagalba vaikams, paaugliams ir jų tėvams.</p>
+                    <p class="lead mb-4">Profesionali ir empatiška pagalba vaikams, paaugliams ir jų tėvams.</p>
+                    
+                    <div class="hero-contact-info mb-4">
+                        <div><i class="fas fa-phone"></i> <strong>+370 600 12345</strong></div>
+                        <div><i class="fas fa-envelope"></i> info@lianasapegina.lt</div>
+                        <div><i class="fas fa-map-marker-alt"></i> Konstitucijos pr. 12, Vilnius</div>
+                    </div>
                 </div>
-                <!-- Nuotraukos dalis -->
-                <div class="col-lg-5 text-center mt-4 mt-lg-0">
-                    <img src="img/port_face.jpg" alt="Psichologė Liana Sapegina" class="hero-avatar img-fluid">
+                <div class="col-lg-5 text-center">
+                    <img src="img/port_face.jpg" alt="Psichologė Liana Sapegina" class="hero-avatar img-fluid rounded shadow">
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Apie mane -->
-    <section id="apie">
+   
+    <section id="apie" class="py-5">
         <div class="container">
-            <div class="row align-items-center g-5"> <!-- g-5 adds a larger gap -->
-                <div class="col-lg-6">
-                    <!-- Wrapper for the "Apie mane" image -->
-                    <div class="apie-image-wrapper shadow-sm">
-                        <img src="img/liana-skaito.jpg" alt="Liana Sapegina skaito vaikams">
-                    </div>
-                </div>
+            <div class="row align-items-center g-5">
                 <div class="col-lg-6">
                     <h2>Apie mane</h2>
-                    <p>Esu Liana Sapegina, vaikų psichologė. Mano tikslas – padėti vaikams suprasti savo jausmus,
-                        įveikti sunkumus ir augti laimingiems. Tikiu, kad kiekvienas vaikas yra unikalus, todėl savo
-                        darbe taikau individualų požiūrį, paremtą žaidimų terapija ir naujausiomis psichologijos
-                        žiniomis.</p>
-                    <p>Kuriu saugią ir pasitikėjimu grįstą aplinką, kurioje vaikai gali laisvai reikšti savo mintis ir
-                        emocijas. Dirbu ne tik su vaikais, bet ir konsultuoju tėvus, padėdamas jiems geriau suprasti
-                        savo atžalas ir atrasti efektyviausius auklėjimo būdus.</p>
+                    <p>Tai, kad savo gyvenimą ir profesiją norėsiu sieti su darbu su žmonėmis, o ypač su vaikais, pajutau dar vaikystėje – maždaug penkerių metų. Nuo tada turėjau dvi svajones: dirbti su vaikais ir dainuoti. Abi jas vienaip ar kitaip išbandžiau, o jų nušviestu keliu keliauju iki šiol.</p>
+                    <p>Savo profesinį kelią pradėjau dirbdama mokytoja ikimokyklinio ugdymo įstaigoje. Vėliau baigiau psichologijos studijas ir pradėjau dirbti psichologe. Ši patirtis leido iš labai arti pažinti vaikų pasaulį – stebėti jų elgesį, charakterio ir temperamento ypatumus, raidos procesus bei tai, kaip visa tai veikia jų santykius su aplinka, kitais žmonėmis ir savimi.</p>
+                    <p>Dirbdama vis aiškiau matau, kokia didelė galia slypi vaikystėje ir ankstyvose patirtyse. Taip pat – kokią svarbą turi suaugusiojo buvimas šalia: pakankamai saugus, jautrus ir brandus santykis su vaiku gali tapti stipria atrama jo augimui ir emocinei raidai.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="mb-3">Profesinė patirtis</h4>
+                    <ul class="list-unstyled small border-start ps-4">
+                        <li class="mb-2">● Šiuo metu dirbu psichologe ikimokyklinio ugdymo įstaigose bei konsultuoju privačioje praktikoje.</li>
+                        <li class="mb-2">● 2018–2025 m. savanoriavau „Jaunimo linijoje“, teikdama emocinę paramą.</li>
+                        <li class="mb-2">● 2021–2025 m. vedžiau emocinio raštingumo užsiėmimus vaikams („Laimės pamokos“) mokykloje ir sostinės ir vaikų jaunimo centre.</li>
+                        <li class="mb-2">● Vedu smurto prieš vaikus prevencijos programą „Esame saugūs“.</li>
+                        <li class="mb-2">● 2012 m. Praktiką atlikau „Inspire“ centre Maltoje, dirbdama su vaikais turinčiais negalią bei specialiuosius poreikius.</li>
+                        <li class="mb-2">● 2018 m. Savanoriavau gamtos terapijos programoje (Wilderness therapy) JAV.</li>
+                        <li class="mb-2">● Ankstesnėje profesinėje patirtyje dirbau mokytoja ikimokyklinio ugdymo srityje.</li>
+                        <li><strong>Narystės:</strong> Lietuvos psichologų sąjungos narė.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Paslaugos -->
-    <section id="paslaugos" class="py-5 bg-light">
+    <section id="issilavinimas" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4">Paslaugos</h2>
-            <div class="row text-center">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Individualios vaikų konsultacijos</h5>
-                            <p class="card-text">Pagalba vaikams, susiduriantiems su nerimu, baimėmis, elgesio
-                                sunkumais, bendravimo problemomis ar adaptacija.</p>
-                        </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="apie-image-wrapper shadow-sm">
+                        <img src="img/liana-skaito.jpg" alt="Liana Sapegina skaito vaikams" class="img-fluid rounded">
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Tėvų konsultavimas</h5>
-                            <p class="card-text">Patarimai ir palaikymas tėvams įvairiais vaiko auginimo ir auklėjimo
-                                klausimais.</p>
-                        </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h4 class="mb-4">Išsilavinimas ir profesinis tobulėjimas</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-graduation-cap me-2 text-primary"></i> 
+                            Nuo 2024 m. studijuoju psichodinaminę vaikų ir paauglių psichoterapiją (bazinis lygis).
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-check me-2 text-primary"></i> 
+                            2018 m. baigiau edukacinės ir vaiko psichologijos magistro studijas Vilniaus universitete.
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-check me-2 text-primary"></i> 
+                            2013 m. pabaigtos psichologijos bakalauro studijos Mykolo Romerio universitete.
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-certificate me-2 text-primary"></i> 
+                            Esu baigusi ASIST savižudybių intervencijos įgūdžių mokymus.
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-user-graduate me-2 text-primary"></i> 
+                            2020 m. Įsisąmoninimu grįstos kognityvinės ir elgesio terapijos (MBCT) pagrindų mokymai (LSMU).
+                        </li>
+                        <li>
+                            <i class="fas fa-sync-alt me-2 text-primary"></i> 
+                            Reguliariai dalyvauju profesinėse supervizijose.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="poziuris" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Mano požiūris į darbą</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <p>Jaučiu didelę prasmę dirbdama su vaikais, paaugliais ir jų šeimomis, nes tikiu ankstyvosios pagalbos svarba. Kai sunkumai pastebimi ir sprendžiami kuo anksčiau, vaikui atsiveria daugiau galimybių sėkmingai vystytis – geriau suprasti save, kurti ryšius su kitais, lengviau mokytis, siekti savo tikslų ir pasitikėti savimi bei aplinka.</p>
+                    <p>Konsultavimo procese siekiu sukurti saugią erdvę, kurioje vaikas galėtų išreikšti savo jausmus ir mintis bei pamažu suprasti, kaip jie gali būti susiję su jo elgesiu ar patiriamais sunkumais. Tikiu ryšio gydančia galia. Tai patiriu ir savo asmeninėje psichoterapijoje, ir kasdien dirbdama su vaikais bei jų šeimomis. Kartais jau pats patyrimas būti išgirstam, priimtam ir suprastam gali tapti svarbiu žingsniu pokyčio link.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kaip-vyks" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Kaip vyksta konsultacijos</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 p-4 shadow-sm">
+                        <h4>Pirmieji susitikimai</h4>
+                        <p>Pirmųjų susitikimų metu siekiame geriau suprasti sunkumus, dėl kurių kreipiamasi. Dažniausiai susitinku su tėvais, o taip pat skiriame kelis susitikimus su vaiku ar paaugliu. Šis etapas padeda geriau pažinti vaiko situaciją, jo patiriamus išgyvenimus bei nuspręsti, kokia pagalba galėtų būti naudingiausia.</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Šeimos terapija</h5>
-                            <p class="card-text">Pagalba visai šeimai siekiant pagerinti tarpusavio santykius, supratimą
-                                ir išspręsti kylančius konfliktus.</p>
-                        </div>
+                <div class="col-md-6">
+                    <div class="card h-100 p-4 shadow-sm">
+                        <h4>Darbas su vaikais / paaugliais</h4>
+                        <p>Konsultacijų metu vaikai gali žaisti, piešti, kalbėtis ar užsiimti kitomis jiems natūraliomis veiklomis. Per šias veiklas jie išreiškia savo patirtis, jausmus ir vidinius išgyvenimus. Mažesniems vaikams pagrindinė raiškos forma dažnai yra žaidimas. Vaikui augant vis svarbesnis tampa pokalbis ir refleksija.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 p-4 shadow-sm">
+                        <h4>Tėvų vaidmuo procese</h4>
+                        <p>Tėvų ar globėjų dalyvavimas yra svarbi pagalbos proceso dalis. Reguliarūs susitikimai su tėvais padeda geriau suprasti vaiko situaciją, aptarti jo raidą, santykius bei ieškoti būdų, kaip tėvai galėtų palaikyti vaiką kasdienybėje, stiprinti tarpusavio ryšį ir kurti saugesnę emocinę aplinką. Vaiko konsultacijos dažniausiai vyksta kartą per savaitę.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 p-4 shadow-sm">
+                        <h4>Pagalbos trukmė</h4>
+                        <p>Pagalbos trukmė priklauso nuo vaiko patiriamų sunkumų pobūdžio, jų trukmės ir individualios situacijos. Kartais pakanka kelių konsultacijų ar trumpesnio konsultavimo laikotarpio, kai sprendžiami konkretūs klausimai. Kitais atvejais gali būti naudinga ilgesnė psichoterapija tvaresniems vidiniams pokyčiams.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mano erdvė -->
-    <section id="erdve">
+    <section id="erdve" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center">Saugi aplinka Jūsų vaikui</h2>
             <p class="lead text-center mx-auto mb-5" style="max-width: 600px;">
                 Mano darbo kabinetas sukurtas taip, kad vaikai jaustųsi jaukiai ir saugiai. Čia gausu žaislų ir
                 priemonių, kurios padeda atsiverti ir tyrinėti savo vidinį pasaulį per žaidimą.
             </p>
-            <div class="row g-4"> <!-- g-4 adds a gap between columns -->
+            <div class="row g-4">
                 <div class="col-md-6">
-                    <!-- Wrapper for the first image -->
                     <div class="erdve-image-wrapper shadow-sm">
-                        <img src="img/erdve-1.jpg" alt="Žaidimų kambarys su lentyna">
+                        <img src="img/erdve-1.jpg" alt="Žaidimų kambarys su lentyna" class="img-fluid rounded">
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <!-- Wrapper for the second image -->
                     <div class="erdve-image-wrapper shadow-sm">
-                        <img src="img/erdve-2.jpg" alt="Konsultacijų kambarys su krėslais">
+                        <img src="img/erdve-2.jpg" alt="Konsultacijų kambarys su krėslais" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- ====================================================== -->
-    <!-- NEW AND CORRECTED MAP SECTION STARTS HERE -->
-    <!-- ====================================================== -->
-    <section id="kaip-rasti">
+    <section id="kaip-rasti" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Kaip mane rasti</h2>
-            <div class="row g-4 align-items-stretch"> <!-- g-4 adds a nice gap between columns -->
-
-                <!-- Map Column -->
-                <div class="col-lg-6">
-                    <div class="map-wrapper shadow">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.907011435094!2d25.27630555688569!3d54.69530029314933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd940445c371c5%3A0xd4248db9fcfcbca!2sKonstitucijos%20pr.%2012!5e0!3m2!1sen!2slt!4v1762196584868!5m2!1sen!2slt"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h2 class="text-center mb-5">Adresas</h2>
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-12">
+                    <div class="map-wrapper shadow h-100" style="min-height: 300px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.907011435094!2d25.27630555688569!3d54.69530029314933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd940445c371c5%3A0xd4248db9fcfcbca!2sKonstitucijos%20pr.%2012!5e0!3m2!1sen!2slt!4v1762196584868!5m2!1sen!2slt" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-
-                <!-- Image Column -->
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="image-wrapper shadow">
-                        <img src="img/durys.png" alt="Įėjimas į kabinetą">
+                        <img src="img/durys.png" alt="Įėjimas į kabinetą" class="img-fluid rounded">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="kainos" class="py-4 bg-light">
+        <div class="container text-center">
+            <h2 class="text-center mb-5">Kainos</h2>
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-4">
+                    <div class="price-card shadow-sm">
+                        <h5>Vaikų / paauglių konsultacija</h5>
+                        <div class="price-amount">40 eur / 50 min.</div>
                     </div>
                 </div>
-
+                <div class="col-md-4">
+                    <div class="price-card shadow-sm">
+                        <h5>Tėvų / globėjų konsultacija</h5>
+                        <div class="price-amount">50 eur / 60 min.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="price-card shadow-sm">
+                        <h5>Tėvų / globėjų konsultacija</h5>
+                        <div class="price-amount">60 eur / 90 min.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
 
-    <!-- Kontaktai (FOOTER STARTS HERE) -->
-    <footer id="kontaktai" class="site-footer">
+    <footer id="kontaktai" class="site-footer bg-dark text-white pt-5 pb-3">
         <div class="container">
             <div class="row">
-                <!-- About Column -->
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <div class="col-lg-4 mb-4">
                     <h4>Liana Sapegina</h4>
                     <p>Vaikų psichologė, padedanti vaikams ir jų šeimoms atrasti emocinę pusiausvyrą ir džiaugsmą.</p>
                 </div>
-
-                <!-- Navigation Column -->
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <div class="col-lg-4 mb-4">
                     <h4>Navigacija</h4>
-                    <ul class="footer-links">
-                        <li><a href="#apie">Apie mane</a></li>
-                        <li><a href="#paslaugos">Paslaugos</a></li>
-                        <li><a href="#erdve">Mano erdvė</a></li>
+                    <ul class="list-unstyled">
+                        <li><a href="#apie" class="text-white-50 text-decoration-none">Apie mane</a></li>
+                        <li><a href="#poziuris" class="text-white-50 text-decoration-none">Požiūris į darbą</a></li>
+                        <li><a href="#kainos" class="text-white-50 text-decoration-none">Kainos</a></li>
                     </ul>
                 </div>
-
-                <!-- Contact Column -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-4">
                     <h4>Kontaktai</h4>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-envelope"></i> <a
-                                href="mailto:info@lianasapegina.lt">info@lianasapegina.lt</a></li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+37060012345">+370 600 12345</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> Konstitucijos pr. 12, Vilnius</li>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@lianasapegina.lt</li>
+                        <li><i class="fas fa-phone me-2"></i> +370 600 12345</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Konstitucijos pr. 12, Vilnius</li>
                     </ul>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <div class="footer-bottom border-top border-secondary pt-3 mt-3 text-center">
+                <div class="social-icons mb-3">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <p class="copyright-text">&copy; 2025 Liana Sapegina. Visos teisės saugomos.</p>
+                <p class="copyright-text small">© 2026 Liana Sapegina. Visos teisės saugomos.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
