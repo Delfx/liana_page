@@ -69,19 +69,41 @@
     <nav class="bg-surface/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div class="flex justify-between items-center w-full px-8 py-4">
             <div class="text-xl font-serif tracking-tight text-on-surface"></div>
+
+            <button id="menu-btn" class="md:hidden text-on-surface-variant focus:outline-none">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+
             <div class="hidden md:flex gap-12 items-center">
                 <a class="font-medium text-primary border-b-2 border-primary pb-1" href="#home">Pradžia</a>
                 <a class="font-medium text-on-surface-variant hover:text-primary transition-colors"
                     href="#about">Apie</a>
                 <a class="font-medium text-on-surface-variant hover:text-primary transition-colors"
-                    href="#approach">Metodai</a>
+                    href="#approach">Konsultacijos</a>
                 <a class="font-medium text-on-surface-variant hover:text-primary transition-colors"
                     href="#services">Paslaugos</a>
                 <a class="font-medium text-on-surface-variant hover:text-primary transition-colors"
                     href="#contact">Kontaktai</a>
             </div>
         </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant px-8 py-4 space-y-4">
+            <a class="block font-medium text-primary" href="#home">Pradžia</a>
+            <a class="block font-medium text-on-surface-variant" href="#about">Apie</a>
+            <a class="block font-medium text-on-surface-variant" href="#approach">Konsultacijos</a>
+            <a class="block font-medium text-on-surface-variant" href="#services">Paslaugos</a>
+            <a class="block font-medium text-on-surface-variant" href="#contact">Kontaktai</a>
+        </div>
     </nav>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
     <header class="relative min-h-[600px] flex items-center overflow-hidden bg-surface" id="home">
         <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <div class="absolute right-[-10%] top-[-10%] w-[120%] lg:w-[80%] h-[120%] opacity-40">
@@ -112,25 +134,30 @@
             </div>
         </div>
         <div class="relative z-10 max-w-7xl mx-auto px-8 w-full py-20 lg:py-32">
-            <div class="max-w-2xl space-y-8">
-                <div
-                    class="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full text-xl font-bold tracking-widest uppercase">
-                    Vaikų ir paauglių psichologė </div>
+            <div class="max-w-2xl space-y-4 md:space-y-">
+                <div class="inline-block px-3 py-1 md:px-6 md:py-2.5 bg-primary-container text-on-primary-container rounded-full font-bold tracking-widest uppercase 
+                text-xs md:text-xl">
+                    Vaikų ir paauglių psichologė
+                </div>
                 <h1 class="text-5xl md:text-6xl font-bold text-on-surface leading-tight tracking-tight">Liana Sapegina
                 </h1>
                 <div class="flex flex-col gap-6 pt-4 max-w-xl">
                     <div class="flex items-center gap-4">
                         <span class="material-symbols-outlined text-primary text-4xl">call</span>
                         <div>
-                            <p class="text-sm text-on-surface-variant uppercase tracking-wide font-semibold">Telefonas</p>
-                            <a href="tel:+37060292561" class="text-xl md:text-2xl text-primary font-bold hover:underline">+370 60292561</a>
+                            <p class="text-sm text-on-surface-variant uppercase tracking-wide font-semibold">Telefonas
+                            </p>
+                            <a href="tel:+37060292561"
+                                class="text-xl md:text-2xl text-primary font-bold hover:underline">+370 60292561</a>
                         </div>
                     </div>
                     <div class="flex items-center gap-4">
                         <span class="material-symbols-outlined text-primary text-4xl">mail</span>
                         <div>
-                            <p class="text-sm text-on-surface-variant uppercase tracking-wide font-semibold">El. paštas</p>
-                            <a href="mailto:psichologeliana@gmail.com" class="text-xl md:text-2xl text-primary font-bold hover:underline">psichologeliana@gmail.com</a>
+                            <p class="text-sm text-on-surface-variant uppercase tracking-wide font-semibold">El. paštas
+                            </p>
+                            <a href="mailto:psichologeliana@gmail.com"
+                                class="text-xl md:text-2xl text-primary font-bold hover:underline">psichologeliana@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -384,6 +411,12 @@
 
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
     </script>
 
 </body>
