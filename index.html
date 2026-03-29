@@ -2,286 +2,390 @@
 <html lang="lt">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psichologė Liana Sapegina | Pagalba vaikams ir šeimai</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <style>
-        /* Išlaikome jūsų stilių, pritaikant mažesnius kainų blokus */
-        .price-card { border: 1px solid #eee; padding: 15px; border-radius: 10px; background: #fff; }
-        .price-card h5 { font-size: 0.95rem; margin-bottom: 5px; }
-        .price-amount { font-size: 1.2rem; font-weight: bold; color: #333; }
-        .hero-contact-info i { color: #6c757d; width: 25px; }
-        .hero-contact-info div { margin-bottom: 8px; font-size: 1rem; }
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E89B86", // Gentle Peach
+                        "on-primary": "#FFFFFF",
+                        "primary-container": "#FCE9E4",
+                        "on-primary-container": "#6D3A2F",
+                        "secondary": "#7D8C69", // Muted Olive Green
+                        "on-secondary": "#FFFFFF",
+                        "secondary-container": "#E7EBDD",
+                        "on-secondary-container": "#2E3624",
+                        "surface": "#FCF9F5", // Creamy off-white
+                        "surface-container-low": "#F8F3EE",
+                        "surface-container": "#F3EDE6",
+                        "surface-container-high": "#EEE6DD",
+                        "on-surface": "#3D3A38",
+                        "on-surface-variant": "#6B645F",
+                        "outline": "#D1C9C2",
+                        "outline-variant": "#E8E1D9",
+                        "background": "#FCF9F5"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1rem", "2xl": "2rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif', serif; }
+        .watercolor-blob {
+            filter: blur(50px);
+            mix-blend-mode: multiply;
+            opacity: 0.25;
+        }
+        .warm-filter {
+            filter: sepia(0.15) saturate(1.1) contrast(0.95) brightness(1.02);
+        }
+        .encompassing-illustration {
+            mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+        }
     </style>
 </head>
 
-<body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">Liana Sapegina</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#apie">Apie mane</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#poziuris">Požiūris</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kaip-vyksta">Konsultacijos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kainos">Kainos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#erdve">Mano erdvė</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kontaktai">Kontaktai</a></li>
-                </ul>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+    <nav class="bg-surface/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="flex justify-between items-center w-full px-8 py-4">
+            <div class="text-xl font-serif tracking-tight text-on-surface"></div>
+            <div class="hidden md:flex gap-12 items-center">
+                <a class="font-medium text-primary border-b-2 border-primary pb-1" href="#home">Pradžia</a>
+                <a class="font-medium text-on-surface-variant hover:text-primary transition-colors"
+                    href="#about">Apie</a>
+                <a class="font-medium text-on-surface-variant hover:text-primary transition-colors"
+                    href="#approach">Metodai</a>
+                <a class="font-medium text-on-surface-variant hover:text-primary transition-colors"
+                    href="#services">Paslaugos</a>
+                <a class="font-medium text-on-surface-variant hover:text-primary transition-colors"
+                    href="#contact">Kontaktai</a>
             </div>
         </div>
     </nav>
-
-    <header id="pagrindinis" class="hero-section d-flex align-items-center" style="padding-top: 120px; padding-bottom: 60px;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 text-center text-lg-start">
-                    <h1 class="display-4">Liana Sapegina</h1>
-                    <p class="lead mb-4">Profesionali ir empatiška pagalba vaikams, paaugliams ir jų tėvams.</p>
-                    
-                    <div class="hero-contact-info mb-4">
-                        <div><i class="fas fa-phone"></i> <strong>+370 600 12345</strong></div>
-                        <div><i class="fas fa-envelope"></i> info@lianasapegina.lt</div>
-                        <div><i class="fas fa-map-marker-alt"></i> Konstitucijos pr. 12, Vilnius</div>
-                    </div>
+    <header class="relative min-h-[600px] flex items-center overflow-hidden bg-surface" id="home">
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <div class="absolute right-[-10%] top-[-10%] w-[120%] lg:w-[80%] h-[120%] opacity-40">
+                <div
+                    class="absolute right-[10%] top-[15%] w-[600px] h-[600px] bg-[#E89B86]/40 rounded-full watercolor-blob">
                 </div>
-                <div class="col-lg-5 text-center">
-                    <img src="img/port_face.jpg" alt="Psichologė Liana Sapegina" class="hero-avatar img-fluid rounded shadow">
+                <div
+                    class="absolute right-[30%] top-[30%] w-[500px] h-[500px] bg-[#7D8C69]/30 rounded-full watercolor-blob">
+                </div>
+                <div
+                    class="absolute left-[10%] bottom-[10%] w-[400px] h-[400px] bg-[#FCE9E4]/60 rounded-full watercolor-blob">
+                </div>
+                <svg class="absolute inset-0 w-full h-full encompassing-illustration" viewBox="0 0 1000 1000"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="brush-texture">
+                            <feTurbulence baseFrequency="0.015" numOctaves="4" type="fractalNoise"></feTurbulence>
+                            <feDisplacementMap in="SourceGraphic" scale="25"></feDisplacementMap>
+                        </filter>
+                    </defs>
+                    <path d="M200,800 C400,750 600,900 800,700 S950,300 850,100" fill="none"
+                        filter="url(#brush-texture)" opacity="0.3" stroke="#E89B86" stroke-width="2"></path>
+                    <path d="M100,600 C300,550 500,700 700,500 S850,200 750,50" fill="none" filter="url(#brush-texture)"
+                        opacity="0.2" stroke="#7D8C69" stroke-width="1.5"></path>
+                    <circle cx="750" cy="400" fill="none" opacity="0.1" r="250" stroke="#E89B86" stroke-width="0.5">
+                    </circle>
+                </svg>
+            </div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-8 w-full py-20 lg:py-32">
+            <div class="max-w-2xl space-y-8">
+                <div
+                    class="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full text-xl font-bold tracking-widest uppercase">
+                    Vaikų ir paauglių psichologė </div>
+                <h1 class="text-5xl md:text-6xl font-bold text-on-surface leading-tight tracking-tight">Liana Sapegina
+                </h1>
+                <div class="flex flex-col gap-6 pt-4 max-w-xl">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">call</span>
+                        <div>
+                            <p class="text-sm text-on-surface-variant uppercase tracking-wide font-semibold">Telefonas</p>
+                            <a href="tel:+37060292561" class="text-xl md:text-2xl text-primary font-bold hover:underline">+370 60292561</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">mail</span>
+                        <div>
+                            <p class="text-sm text-on-surface-variant uppercase tracking-wide font-semibold">El. paštas</p>
+                            <a href="mailto:psichologeliana@gmail.com" class="text-xl md:text-2xl text-primary font-bold hover:underline">psichologeliana@gmail.com</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+    <section class="py-32 bg-surface" id="about">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-primary-container rounded-2xl -rotate-2"></div>
+                    <img alt="Professional portrait of a warm and approachable woman"
+                        class="relative z-10 w-full aspect-[4/5] object-cover rounded-2xl shadow-2xl warm-filter"
+                        src="img/port_face.jpg" />
+                </div>
+                <div class="space-y-10">
+                    <div
+                        class="inline-flex items-center gap-3 text-secondary font-bold tracking-[0.2em] uppercase text-sm">
+                        <span class="w-12 h-0.5 bg-secondary"></span> Apie mane
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-on-surface leading-tight">Saugi erdvė augti ir
+                        sveikti</h2>
+                    <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+                        <p>Esu vaikų ir paauglių psichologė dirbanti dešimt metų su vaikais švietimo srityje. Jaučiu
+                            didelę prasmę dirbdama su vaikais, paaugliais ir jų šeimomis, nes tikiu ankstyvosios
+                            pagalbos svarba. Kai sunkumai pastebimi ir sprendžiami kuo anksčiau, vaikui atsiveria
+                            daugiau galimybių sėkmingai vystytis – geriau suprasti save, kurti ryšius su kitais,
+                            lengviau mokytis, siekti savo tikslų ir pasitikėti savimi bei aplinka.</p>
+                        <p> Konsultacijose siekiu sukurti saugią ir palaikančią erdvę, kurioje vaikas galėtų savo tempu
+                            atskleisti ir tyrinėti savo jausmus bei patirtis. Geriau pažindamas save, vaikas gali
+                            jaustis tvirčiau, labiau pasitikėti savimi ir kurti artimesnius santykius su kitais.
+                            Gydančią santykio galią patiriu ir savo asmeninėje psichoterapijoje, ir kasdien dirbdama su
+                            vaikais bei jų šeimomis. Kartais jau pats patyrimas būti išgirstam, priimtam ir suprastam
+                            gali tapti svarbiu žingsniu pokyčių link.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 pt-10 border-t border-outline-variant">
 
-   
-    <section id="apie" class="py-5">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <h2>Apie mane</h2>
-                    <p>Tai, kad savo gyvenimą ir profesiją norėsiu sieti su darbu su žmonėmis, o ypač su vaikais, pajutau dar vaikystėje – maždaug penkerių metų. Nuo tada turėjau dvi svajones: dirbti su vaikais ir dainuoti. Abi jas vienaip ar kitaip išbandžiau, o jų nušviestu keliu keliauju iki šiol.</p>
-                    <p>Savo profesinį kelią pradėjau dirbdama mokytoja ikimokyklinio ugdymo įstaigoje. Vėliau baigiau psichologijos studijas ir pradėjau dirbti psichologe. Ši patirtis leido iš labai arti pažinti vaikų pasaulį – stebėti jų elgesį, charakterio ir temperamento ypatumus, raidos procesus bei tai, kaip visa tai veikia jų santykius su aplinka, kitais žmonėmis ir savimi.</p>
-                    <p>Dirbdama vis aiškiau matau, kokia didelė galia slypi vaikystėje ir ankstyvose patirtyse. Taip pat – kokią svarbą turi suaugusiojo buvimas šalia: pakankamai saugus, jautrus ir brandus santykis su vaiku gali tapti stipria atrama jo augimui ir emocinei raidai.</p>
-                </div>
-                <div class="col-lg-6">
-                    <h4 class="mb-3">Profesinė patirtis</h4>
-                    <ul class="list-unstyled small border-start ps-4">
-                        <li class="mb-2">● Šiuo metu dirbu psichologe ikimokyklinio ugdymo įstaigose bei konsultuoju privačioje praktikoje.</li>
-                        <li class="mb-2">● 2018–2025 m. savanoriavau „Jaunimo linijoje“, teikdama emocinę paramą.</li>
-                        <li class="mb-2">● 2021–2025 m. vedžiau emocinio raštingumo užsiėmimus vaikams („Laimės pamokos“) mokykloje ir sostinės ir vaikų jaunimo centre.</li>
-                        <li class="mb-2">● Vedu smurto prieš vaikus prevencijos programą „Esame saugūs“.</li>
-                        <li class="mb-2">● 2012 m. Praktiką atlikau „Inspire“ centre Maltoje, dirbdama su vaikais turinčiais negalią bei specialiuosius poreikius.</li>
-                        <li class="mb-2">● 2018 m. Savanoriavau gamtos terapijos programoje (Wilderness therapy) JAV.</li>
-                        <li class="mb-2">● Ankstesnėje profesinėje patirtyje dirbau mokytoja ikimokyklinio ugdymo srityje.</li>
-                        <li><strong>Narystės:</strong> Lietuvos psichologų sąjungos narė.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="issilavinimas" class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="apie-image-wrapper shadow-sm">
-                        <img src="img/liana-skaito.jpg" alt="Liana Sapegina skaito vaikams" class="img-fluid rounded">
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <h4 class="mb-4">Išsilavinimas ir profesinis tobulėjimas</h4>
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
-                            <i class="fas fa-graduation-cap me-2 text-primary"></i> 
-                            Nuo 2024 m. studijuoju psichodinaminę vaikų ir paauglių psichoterapiją (bazinis lygis).
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-check me-2 text-primary"></i> 
-                            2018 m. baigiau edukacinės ir vaiko psichologijos magistro studijas Vilniaus universitete.
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-check me-2 text-primary"></i> 
-                            2013 m. pabaigtos psichologijos bakalauro studijos Mykolo Romerio universitete.
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-certificate me-2 text-primary"></i> 
-                            Esu baigusi ASIST savižudybių intervencijos įgūdžių mokymus.
-                        </li>
-                        <li class="mb-3">
-                            <i class="fas fa-user-graduate me-2 text-primary"></i> 
-                            2020 m. Įsisąmoninimu grįstos kognityvinės ir elgesio terapijos (MBCT) pagrindų mokymai (LSMU).
-                        </li>
-                        <li>
-                            <i class="fas fa-sync-alt me-2 text-primary"></i> 
-                            Reguliariai dalyvauju profesinėse supervizijose.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="poziuris" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Mano požiūris į darbą</h2>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <p>Jaučiu didelę prasmę dirbdama su vaikais, paaugliais ir jų šeimomis, nes tikiu ankstyvosios pagalbos svarba. Kai sunkumai pastebimi ir sprendžiami kuo anksčiau, vaikui atsiveria daugiau galimybių sėkmingai vystytis – geriau suprasti save, kurti ryšius su kitais, lengviau mokytis, siekti savo tikslų ir pasitikėti savimi bei aplinka.</p>
-                    <p>Konsultavimo procese siekiu sukurti saugią erdvę, kurioje vaikas galėtų išreikšti savo jausmus ir mintis bei pamažu suprasti, kaip jie gali būti susiję su jo elgesiu ar patiriamais sunkumais. Tikiu ryšio gydančia galia. Tai patiriu ir savo asmeninėje psichoterapijoje, ir kasdien dirbdama su vaikais bei jų šeimomis. Kartais jau pats patyrimas būti išgirstam, priimtam ir suprastam gali tapti svarbiu žingsniu pokyčio link.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="kaip-vyks" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Kaip vyksta konsultacijos</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card h-100 p-4 shadow-sm">
-                        <h4>Pirmieji susitikimai</h4>
-                        <p>Pirmųjų susitikimų metu siekiame geriau suprasti sunkumus, dėl kurių kreipiamasi. Dažniausiai susitinku su tėvais, o taip pat skiriame kelis susitikimus su vaiku ar paaugliu. Šis etapas padeda geriau pažinti vaiko situaciją, jo patiriamus išgyvenimus bei nuspręsti, kokia pagalba galėtų būti naudingiausia.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card h-100 p-4 shadow-sm">
-                        <h4>Darbas su vaikais / paaugliais</h4>
-                        <p>Konsultacijų metu vaikai gali žaisti, piešti, kalbėtis ar užsiimti kitomis jiems natūraliomis veiklomis. Per šias veiklas jie išreiškia savo patirtis, jausmus ir vidinius išgyvenimus. Mažesniems vaikams pagrindinė raiškos forma dažnai yra žaidimas. Vaikui augant vis svarbesnis tampa pokalbis ir refleksija.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card h-100 p-4 shadow-sm">
-                        <h4>Tėvų vaidmuo procese</h4>
-                        <p>Tėvų ar globėjų dalyvavimas yra svarbi pagalbos proceso dalis. Reguliarūs susitikimai su tėvais padeda geriau suprasti vaiko situaciją, aptarti jo raidą, santykius bei ieškoti būdų, kaip tėvai galėtų palaikyti vaiką kasdienybėje, stiprinti tarpusavio ryšį ir kurti saugesnę emocinę aplinką. Vaiko konsultacijos dažniausiai vyksta kartą per savaitę.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card h-100 p-4 shadow-sm">
-                        <h4>Pagalbos trukmė</h4>
-                        <p>Pagalbos trukmė priklauso nuo vaiko patiriamų sunkumų pobūdžio, jų trukmės ir individualios situacijos. Kartais pakanka kelių konsultacijų ar trumpesnio konsultavimo laikotarpio, kai sprendžiami konkretūs klausimai. Kitais atvejais gali būti naudinga ilgesnė psichoterapija tvaresniems vidiniams pokyčiams.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="erdve" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center">Saugi aplinka Jūsų vaikui</h2>
-            <p class="lead text-center mx-auto mb-5" style="max-width: 600px;">
-                Mano darbo kabinetas sukurtas taip, kad vaikai jaustųsi jaukiai ir saugiai. Čia gausu žaislų ir
-                priemonių, kurios padeda atsiverti ir tyrinėti savo vidinį pasaulį per žaidimą.
-            </p>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="erdve-image-wrapper shadow-sm">
-                        <img src="img/erdve-1.jpg" alt="Žaidimų kambarys su lentyna" class="img-fluid rounded">
+    <section class="py-32 relative overflow-hidden" id="approach">
+        <div class="absolute inset-0 bg-surface-container-low"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-6">
+                <h2 class="text-4xl font-bold text-on-surface">Kaip vyksta konsultacijos</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div
+                    class="bg-surface p-10 rounded-2xl shadow-sm border border-outline-variant/30 hover:border-primary/50 transition-all group">
+                    <div
+                        class="w-14 h-14 bg-primary-container text-primary flex items-center justify-center rounded-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">handshake</span>
                     </div>
+                    <h3 class="text-2xl font-bold mb-5 text-on-surface">Pirmieji susitikimai</h3>
+                    <p class="text-on-surface-variant text-base leading-relaxed">Pirmųjų susitikimų metu siekiame geriau
+                        suprasti sunkumus, dėl kurių kreipiamasi. Dažniausiai susitinku su tėvais, o taip pat skiriame
+                        kelis susitikimus su vaiku ar paaugliu. Šis etapas padeda geriau pažinti vaiko situaciją, jo
+                        patiriamus išgyvenimus bei nuspręsti, kokia pagalba galėtų būti naudingiausia.</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="erdve-image-wrapper shadow-sm">
-                        <img src="img/erdve-2.jpg" alt="Konsultacijų kambarys su krėslais" class="img-fluid rounded">
+                <div
+                    class="bg-surface p-10 rounded-2xl shadow-sm border border-outline-variant/30 hover:border-primary/50 transition-all group">
+                    <div
+                        class="w-14 h-14 bg-secondary-container text-secondary flex items-center justify-center rounded-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">child_care</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-5 text-on-surface">Kaip vyksta konsultacijos su vaikais/paaugliais
+                    </h3>
+                    <p class="text-on-surface-variant text-base leading-relaxed">Konsultacijų metu vaikai gali žaisti,
+                        piešti, kalbėtis ar užsiimti kitomis jiems natūraliomis veiklomis. Per šias veiklas jie
+                        išreiškia savo patirtis, jausmus ir vidinius išgyvenimus. Mažesniems vaikams pagrindinė raiškos
+                        forma dažnai yra žaidimas. Vaikui augant vis svarbesnis tampa pokalbis ir refleksija.
+                        Konsultacijose siekiama sukurti saugią erdvę, kurioje vaikas gali būti priimtas su visais savo
+                        jausmais ir patirtimis.</p>
+                </div>
+                <div
+                    class="bg-surface p-10 rounded-2xl shadow-sm border border-outline-variant/30 hover:border-primary/50 transition-all group">
+                    <div
+                        class="w-14 h-14 bg-primary-container text-primary flex items-center justify-center rounded-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">family_restroom</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-5 text-on-surface">Tėvų vaidmuo procese</h3>
+                    <p class="text-on-surface-variant text-base leading-relaxed">Tėvų ar globėjų dalyvavimas yra saranbi
+                        pagalbos proceso dalis. Reguliarūs susitikimai su tėvais padeda geriau suprasti vaiko situaciją,
+                        aptarti jo raidą, santykius bei ieškoti būdų, kaip tėvai galėtų palaikyti vaiką kasdienybėje,
+                        stiprinti tarpusavio ryšį ir kurti saugesnę emocinę aplinką. Vaiko konsultacijos dažniausiai
+                        vyksta kartą per savaitę, o susitikimai su tėvais organizuojami periodiškai, atsižvelgiant į
+                        vaiko amžių ir situacijos poreikius.</p>
+                </div>
+                <div
+                    class="bg-surface p-10 rounded-2xl shadow-sm border border-outline-variant/30 hover:border-primary/50 transition-all group">
+                    <div
+                        class="w-14 h-14 bg-secondary-container text-secondary flex items-center justify-center rounded-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">schedule</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-5 text-on-surface">Kiek gali trukti pagalba</h3>
+                    <p class="text-on-surface-variant text-base leading-relaxed">Pagalbos trukmė priklauso nuo vaiko
+                        patiriamų sunkumų pobūdžio, jų trukmės ir individualios situacijos. Kartais pakanka kelių
+                        konsultacijų ar trumpesnio konsultavimo laikotarpio, kai sprendžiami konkretūs klausimai ar
+                        sunkumai. Kitais atvejais gali būti naudinga ilgesnė psichoterapija, kuri leidžia giliau
+                        tyrinėti vaiko patirtis ir kurti tvaresnius vidinius pokyčius.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-32 bg-surface">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col lg:flex-row gap-20">
+                <div class="lg:w-1/3">
+                    <h2 class="text-4xl font-bold text-on-surface lg:sticky lg:top-32">Išsilavinimas ir patirtis</h2>
+                </div>
+                <div class="lg:w-2/3 space-y-20">
+                    <div class="space-y-8">
+                        <h3 class="text-2xl font-bold flex items-center gap-4 text-on-surface">
+                            <span class="material-symbols-outlined text-primary text-3xl">school</span> Išsilavinimas ir
+                            profesinis tobulėjimas
+                        </h3>
+                        <ul class="space-y-5 text-on-surface-variant list-none">
+                            <li class="flex gap-4"><span class="text-primary font-bold">•</span> Nuo 2024 m. studijuoju
+                                psichodinaminę vaikų ir paauglių psichoterapiją (bazinis lygis).</li>
+                            <li class="flex gap-4"><span class="text-primary font-bold">•</span> 2018 m. baigiau
+                                edukacinės ir vaiko psichologijos magistro studijas Vilniaus universitete.</li>
+                            <li class="flex gap-4"><span class="text-primary font-bold">•</span> 2013 m. pabaigtos
+                                psichologijos bakalauro studijos Mykolo Romerio universitete.</li>
+                            <li class="flex gap-4"><span class="text-primary font-bold">•</span> 2020 m. Įsisąmoninimu
+                                grįstos kognityvinės ir elgesio terapijos (MBCT) pagrindų mokymai, Lietuvos sveikatos
+                                mokslų universiteto Neuromokslų institute.</li>
+                            <li class="flex gap-4"><span class="text-primary font-bold">•</span> Esu baigusi ASIST
+                                savižudybių intervencijos įgūdžių mokymus.</li>
+                            <li class="flex gap-4"><span class="text-primary font-bold">•</span> Reguliariai dalyvauju
+                                profesinėse supervizijose.</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-8">
+                        <h3 class="text-2xl font-bold flex items-center gap-4 text-on-surface">
+                            <span class="material-symbols-outlined text-primary text-3xl">work_history</span> Profesinė
+                            patirtis
+                        </h3>
+                        <div class="space-y-5 text-on-surface-variant text-lg">
+                            <p>Šiuo metu dirbu psichologe ikimokyklinio ugdymo įstaigose bei konsultuoju privačioje
+                                praktikoje.</p>
+                            <p>2018–2025 m. savanoriavau „Jaunimo linijoje“, teikdama emocinę paramą.</p>
+                            <p>2021–2025 m. vedžiau emocinio raštingumo užsiėmimus vaikams („Laimės pamokos“) mokykloje
+                                ir sostinės ir vaikų jaunimo centre.</p>
+                            <p>Vedu smurto prieš vaikus prevencijos programą „Esame saugūs“.</p>
+                        </div>
+                    </div>
+                    <!-- <div class="space-y-8">
+                        <h3 class="text-2xl font-bold flex items-center gap-4 text-on-surface">
+                            <span class="material-symbols-outlined text-primary text-3xl">public</span> Tarptautinė ir
+                            papildoma patirtis
+                        </h3>
+                        <div class="bg-surface-container-low p-10 rounded-2xl space-y-6 border border-outline-variant">
+                            <p class="text-on-surface-variant"><strong class="text-on-surface">2012 m.</strong> Praktiką
+                                atlikau „Inspire“ centre Maltoje, dirbdama su vaikais turinčiais negalią bei
+                                specialiuosius poreikius.</p>
+                            <p class="text-on-surface-variant"><strong class="text-on-surface">2018 m.</strong>
+                                Savanoriavau gamtos terapijos programoje (Wilderness therapy) JAV.</p>
+                            <p class="text-on-surface-variant">Ankstesnėje profesinėje patirtyje dirbau mokytoja
+                                ikimokyklinio ugdymo srityje, kas suteikė galimybę iš arti pažinti vaikų raidą ir
+                                kasdienius jų iššūkius.</p>
+                        </div>
+                    </div> -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold flex items-center gap-4 text-on-surface">
+                            <span class="material-symbols-outlined text-primary text-3xl">verified_user</span> Narystės
+                        </h3>
+                        <p class="text-secondary font-bold text-lg">Lietuvos psichologų sąjungos narė.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="kaip-rasti" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Adresas</h2>
-            <div class="row g-4 align-items-stretch">
-                <div class="col-lg-12">
-                    <div class="map-wrapper shadow h-100" style="min-height: 300px;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.907011435094!2d25.27630555688569!3d54.69530029314933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd940445c371c5%3A0xd4248db9fcfcbca!2sKonstitucijos%20pr.%2012!5e0!3m2!1sen!2slt!4v1762196584868!5m2!1sen!2slt" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <section class="py-10 bg-surface-container-low" id="services">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-8 space-y-2">
+                <h2 class="text-3xl font-bold text-on-surface">Konsultacijų kainos</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                <div
+                    class="bg-surface p-5 rounded-2xl flex flex-col items-center text-center shadow-sm border border-outline-variant hover:shadow-xl hover:border-primary/50 transition-all">
+                    <div
+                        class="w-10 h-10 bg-primary-container rounded-full flex items-center justify-center text-primary mb-3">
+                        <span class="material-symbols-outlined text-xl">mood</span>
                     </div>
+                    <h3 class="text-base font-bold mb-1">Vaikų / paauglių konsultacija</h3>
+                    <div class="text-xl font-bold text-primary my-2">40 €</div>
+                    <div class="text-on-surface-variant text-sm mb-4">Trukmė: 50 min.</div>
                 </div>
-                <!-- <div class="col-lg-6">
-                    <div class="image-wrapper shadow">
-                        <img src="img/durys.png" alt="Įėjimas į kabinetą" class="img-fluid rounded">
+
+                <div
+                    class="bg-surface p-5 rounded-2xl flex flex-col items-center text-center shadow-sm border border-outline-variant hover:shadow-xl hover:border-primary/50 transition-all">
+                    <div
+                        class="w-10 h-10 bg-primary-container rounded-full flex items-center justify-center text-primary mb-3">
+                        <span class="material-symbols-outlined text-xl">groups</span>
                     </div>
+                    <h3 class="text-base font-bold mb-1">Tėvų konsultacija</h3>
+                    <div class="text-xl font-bold text-primary my-2">60 €</div>
+                    <div class="text-on-surface-variant text-sm mb-4">Trukmė: 90 min.</div>
+                </div>
+
+                <div
+                    class="bg-surface p-5 rounded-2xl flex flex-col items-center text-center shadow-sm border border-outline-variant hover:shadow-xl hover:border-primary/50 transition-all">
+                    <div
+                        class="w-10 h-10 bg-primary-container rounded-full flex items-center justify-center text-primary mb-3">
+                        <span class="material-symbols-outlined text-xl">diversity_1</span>
+                    </div>
+                    <h3 class="text-base font-bold mb-1">Tėvų konsultacija</h3>
+                    <div class="text-xl font-bold text-primary my-2">40 €</div>
+                    <div class="text-on-surface-variant text-sm mb-4">Trukmė: 50 min.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-surface-container py-20 px-8 border-t border-outline-variant" id="contact">
+        <div class="grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto px-4">
+            <div class="space-y-6">
+                <div class="font-serif text-2xl text-on-surface">Liana Sapegina</div>
+                <p class="text-base leading-relaxed text-on-surface-variant">
+                    Individualios psichologinės konsultacijos vaikams, paaugliams ir jų tėvams.
+                </p>
+                <!-- <div class="flex gap-6">
+                    <a class="text-primary hover:scale-110 transition-transform" href="#"><span
+                            class="material-symbols-outlined text-3xl">mail</span></a>
+                    <a class="text-primary hover:scale-110 transition-transform" href="#"><span
+                            class="material-symbols-outlined text-3xl">call</span></a>
+                    <a class="text-primary hover:scale-110 transition-transform" href="#"><span
+                            class="material-symbols-outlined text-3xl">location_on</span></a>
                 </div> -->
             </div>
-        </div>
-    </section>
-
-    <section id="kainos" class="py-4 bg-light">
-        <div class="container text-center">
-            <h2 class="text-center mb-5">Kainos</h2>
-            <div class="row g-3 justify-content-center">
-                <div class="col-md-4">
-                    <div class="price-card shadow-sm">
-                        <h5>Vaikų / paauglių konsultacija</h5>
-                        <div class="price-amount">40 eur / 50 min.</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="price-card shadow-sm">
-                        <h5>Tėvų / globėjų konsultacija</h5>
-                        <div class="price-amount">50 eur / 60 min.</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="price-card shadow-sm">
-                        <h5>Tėvų / globėjų konsultacija</h5>
-                        <div class="price-amount">60 eur / 90 min.</div>
-                    </div>
+            <div></div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-on-surface uppercase tracking-widest text-sm">Kontaktai</h4>
+                <div class="p-8 bg-surface rounded-2xl border border-outline-variant">
+                    <p class="text-sm font-bold text-on-surface uppercase tracking-tighter mb-1">Adresas:</p>
+                    <p class="text-base text-on-surface-variant mb-6">Konstitucijos pr. 12 ,Vilnius, Lietuva</p>
+                    <p class="text-sm font-bold text-on-surface uppercase tracking-tighter mb-1">Telefonas:</p>
+                    <p class="text-base text-on-surface-variant mb-6">+370 60292561</p>
+                    <p class="text-sm font-bold text-on-surface uppercase tracking-tighter mb-1">El. paštas:</p>
+                    <p class="text-base text-on-surface-variant mb-6">psichologeliana@gmail.com</p>
                 </div>
             </div>
         </div>
-    </section>
-
-
-    <footer id="kontaktai" class="site-footer bg-dark text-white pt-5 pb-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h4>Liana Sapegina</h4>
-                    <p>Vaikų psichologė, padedanti vaikams ir jų šeimoms atrasti emocinę pusiausvyrą ir džiaugsmą.</p>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h4>Navigacija</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#apie" class="text-white-50 text-decoration-none">Apie mane</a></li>
-                        <li><a href="#poziuris" class="text-white-50 text-decoration-none">Požiūris į darbą</a></li>
-                        <li><a href="#kainos" class="text-white-50 text-decoration-none">Kainos</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h4>Kontaktai</h4>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-envelope me-2"></i> info@lianasapegina.lt</li>
-                        <li><i class="fas fa-phone me-2"></i> +370 600 12345</li>
-                        <li><i class="fas fa-map-marker-alt me-2"></i> Konstitucijos pr. 12, Vilnius</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom border-top border-secondary pt-3 mt-3 text-center">
-                <div class="social-icons mb-3">
-                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <p class="copyright-text small">© 2026 Liana Sapegina. Visos teisės saugomos.</p>
-            </div>
+        <div class="max-w-7xl mx-auto w-full mt-20 pt-10 border-t border-outline-variant text-center">
+            <p class="text-sm text-on-surface-variant">© <span id="current-year">2026</span> Liana Sapegina. Visos
+                teisės saugomos.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
 </body>
 
 </html>
